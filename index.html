@@ -757,7 +757,7 @@ const NOTES=["Bucle previo: dejar avanzar las diapositivas 1 a 15 en silencio mi
   let at=null;const bA=document.getElementById('bAuto');
   function auto(){if(at){clearInterval(at);at=null;bA.textContent='Bucle automático (A)';return;}
     if(!loopIdx.includes(cur))go(loopIdx[0]);
-    at=setInterval(()=>{const p=loopIdx.indexOf(cur);go(loopIdx[(p+1)%loopIdx.length]);},15000);bA.textContent='Detener bucle (A)';}
+    at=setInterval(()=>{const p=loopIdx.indexOf(cur);go(loopIdx[(p+1)%loopIdx.length]);},11000);bA.textContent='Detener bucle (A)';}
   bA.onclick=auto;
   document.getElementById('bNotes').onclick=()=>{nt.hidden=!nt.hidden;notes();};
   document.addEventListener('keydown',e=>{
